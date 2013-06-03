@@ -1,0 +1,26 @@
+development:
+  adapter: postgresql
+  database: rvp_development
+  pool: 5
+  username: postgres
+  password: 090789ae06*
+  host: localhost
+  encoding: UTF8
+
+test:
+  adapter: postgresql
+  database: rvp_development
+  pool: 5
+  username: postgres
+  password: 090789ae06*
+  host: localhost
+  encoding: UTF8
+
+production:
+  adapter: postgresql
+  database: rvp_development
+  pool: 5
+  username: postgres
+  password: 090789ae06*
+  host: localhost
+  encoding: UTF8
