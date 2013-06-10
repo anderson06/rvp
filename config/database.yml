@@ -3,7 +3,7 @@ development:
   database: rvp_development
   pool: 5
   username: postgres
-  password: 06and34
+  password: 090789ae06*
   host: localhost
   encoding: UTF8
 
@@ -12,7 +12,7 @@ test:
   database: rvp_development
   pool: 5
   username: postgres
-  password: 06and34
+  password: 090789ae06*
   host: localhost
   encoding: UTF8
 
@@ -21,6 +21,6 @@ production:
   database: rvp_development
   pool: 5
   username: postgres
-  password: 06and34
+  password: 090789ae06*
   host: localhost
   encoding: UTF8

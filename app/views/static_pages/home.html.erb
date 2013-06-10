@@ -7,8 +7,14 @@
 <div class="row">
 	<div class="span8">
 		Mapa
+		<img src="assets/mapa600.gif">
 	</div>
 	<div class="span4">
 		Formulário
+		<%= form_tag("/horario", :method => "get", :class => "estacao") do %>
+		  <%= select_tag(:city_id, options_for_select(@origem)) %>
+		  <%= select_tag(:city_id, options_for_select(@destiny)) %>
+		  <%= submit_tag("Tempo", :class => "btn btn-primary") %>
+		<% end %>
 	</div>
 </div>
