@@ -11,10 +11,18 @@
 	</div>
 	<div class="span4">
 		Formulário
-		<%= form_tag("/horario", :method => "get", :class => "estacao") do %>
-		  <%= select_tag(:city_id, options_for_select(@origem)) %>
-		  <%= select_tag(:city_id, options_for_select(@destiny)) %>
+		<%= form_tag("/", :method => "get", :class => "estacao") do %>
+		  <%= select_tag(:origem_city_id, options_for_select(@origem)) %>
+		  <%= select_tag(:destiny_city_id, options_for_select(@destiny)) %>
 		  <%= submit_tag("Tempo", :class => "btn btn-primary") %>
+		<% end %>
+
+		<% if @nextTrains %>
+			<% @nextTrains.each do |nextTrain| %>
+				<ul class="times">
+					<%= render 'time', nextTrain: nextTrain %>
+				</ul>
+			<% end %>
 		<% end %>
 	</div>
 </div>

@@ -41,6 +41,20 @@ class StaticPagesController < ApplicationController
   	@origem.unshift(['Origem', 0])
   	@destiny = stations.clone
   	@destiny.unshift(['Destino', 0])
+
+    if params[:origem_city_id]
+      if params[:origem_city_id] == '0' || params[:destiny_city_id] == '0'
+        flash.now[:error] = "Escolha a estação de oridem e de destino"
+      else
+        @nextTrains = Array.new 
+        for i in 0..rand(6)
+           time = rand(10) + 2
+           line = rand(10)
+           nextTrain = "Próximo trem em #{time} minutos na linha #{line}"
+           @nextTrains << nextTrain
+        end
+      end      
+    end
   end
 
   def help
