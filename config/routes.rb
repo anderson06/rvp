@@ -1,6 +1,13 @@
 Rvp::Application.routes.draw do
   
+  resources :users
+
+
   root to: 'static_pages#home'
+  match '/passagem',    to: 'static_pages#ticket'
+  match '/passagem/comprar',    to: 'static_pages#buy_ticket'
+
+
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

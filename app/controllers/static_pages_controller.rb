@@ -62,4 +62,12 @@ class StaticPagesController < ApplicationController
 
   def time
   end
+
+  def ticket
+  end
+
+  def buy_ticket
+    flash[:success] = "Carga de #{params[:value]} para o cartão #{params[:card_number]}"
+    redirect_to passagem_path
+  end
 end

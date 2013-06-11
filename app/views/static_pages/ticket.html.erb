@@ -1,0 +1,11 @@
+<h1>Comprar Passagem</h1>
+
+<div class="row">
+	<div class="span4 offset4">
+		<%= form_tag("/passagem/comprar", :method => "get", :class => "estacao") do %>
+		  <%= text_field_tag 'card_number', 'Número do Cartão' %>
+		  <%= text_field_tag 'value', 'R$ 0,00' %>
+		  <%= submit_tag("Comprar", :class => "btn btn-primary") %>
+		<% end %>
+	</div>
+</div>
